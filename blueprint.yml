@@ -1,0 +1,209 @@
+blueprint:
+  name: SmartThings Button Control with Different Actions
+  description: Handle SmartThings button presses with custom actions based on button type and press type.
+  domain: automation
+  input:
+    button_device:
+      name: Button Device
+      description: The SmartThings button device
+      selector:
+        text: {}
+    # Button 1 Actions
+    button1_pushed:
+      name: Button 1 Pushed Action
+      selector:
+        action: {}
+    button1_held:
+      name: Button 1 Held Action
+      selector:
+        action: {}
+    button1_pushed_2x:
+      name: Button 1 Pushed 2x Action
+      selector:
+        action: {}
+    button1_pushed_3x:
+      name: Button 1 Pushed 3x Action
+      selector:
+        action: {}
+    button1_pushed_4x:
+      name: Button 1 Pushed 4x Action
+      selector:
+        action: {}
+
+    # Button 2 Actions
+    button2_pushed:
+      name: Button 2 Pushed Action
+      selector:
+        action: {}
+    button2_held:
+      name: Button 2 Held Action
+      selector:
+        action: {}
+    button2_pushed_2x:
+      name: Button 2 Pushed 2x Action
+      selector:
+        action: {}
+    button2_pushed_3x:
+      name: Button 2 Pushed 3x Action
+      selector:
+        action: {}
+    button2_pushed_4x:
+      name: Button 2 Pushed 4x Action
+      selector:
+        action: {}
+
+    # Button 3 Actions
+    button3_pushed:
+      name: Button 3 Pushed Action
+      selector:
+        action: {}
+    button3_held:
+      name: Button 3 Held Action
+      selector:
+        action: {}
+    button3_pushed_2x:
+      name: Button 3 Pushed 2x Action
+      selector:
+        action: {}
+    button3_pushed_3x:
+      name: Button 3 Pushed 3x Action
+      selector:
+        action: {}
+    button3_pushed_4x:
+      name: Button 3 Pushed 4x Action
+      selector:
+        action: {}
+
+    # Button 4 Actions
+    button4_pushed:
+      name: Button 4 Pushed Action
+      selector:
+        action: {}
+    button4_held:
+      name: Button 4 Held Action
+      selector:
+        action: {}
+    button4_pushed_2x:
+      name: Button 4 Pushed 2x Action
+      selector:
+        action: {}
+    button4_pushed_3x:
+      name: Button 4 Pushed 3x Action
+      selector:
+        action: {}
+    button4_pushed_4x:
+      name: Button 4 Pushed 4x Action
+      selector:
+        action: {}
+
+    # Button 5 Actions
+    button5_pushed:
+      name: Button 5 Pushed Action
+      selector:
+        action: {}
+    button5_held:
+      name: Button 5 Held Action
+      selector:
+        action: {}
+    button5_pushed_2x:
+      name: Button 5 Pushed 2x Action
+      selector:
+        action: {}
+    button5_pushed_3x:
+      name: Button 5 Pushed 3x Action
+      selector:
+        action: {}
+    button5_pushed_4x:
+      name: Button 5 Pushed 4x Action
+      selector:
+        action: {}
+
+mode: single
+max_exceeded: silent
+
+trigger:
+  platform: event
+  event_type: smartthings.button
+  event_data:
+    device_id: !input 'button_device'
+
+action:
+  - variables:
+      component_id: "{{ trigger.event.data.component_id }}"
+      value: "{{ trigger.event.data.value }}"
+  - choose:
+      # Button 1 Conditions
+      - conditions: "{{ component_id == 'button1' }}"
+        sequence:
+          - choose:
+              - conditions: "{{ value == 'pushed' }}"
+                sequence: !input 'button1_pushed'
+              - conditions: "{{ value == 'held' }}"
+                sequence: !input 'button1_held'
+              - conditions: "{{ value == 'pushed_2x' }}"
+                sequence: !input 'button1_pushed_2x'
+              - conditions: "{{ value == 'pushed_3x' }}"
+                sequence: !input 'button1_pushed_3x'
+              - conditions: "{{ value == 'pushed_4x' }}"
+                sequence: !input 'button1_pushed_4x'
+
+      # Button 2 Conditions
+      - conditions: "{{ component_id == 'button2' }}"
+        sequence:
+          - choose:
+              - conditions: "{{ value == 'pushed' }}"
+                sequence: !input 'button2_pushed'
+              - conditions: "{{ value == 'held' }}"
+                sequence: !input 'button2_held'
+              - conditions: "{{ value == 'pushed_2x' }}"
+                sequence: !input 'button2_pushed_2x'
+              - conditions: "{{ value == 'pushed_3x' }}"
+                sequence: !input 'button2_pushed_3x'
+              - conditions: "{{ value == 'pushed_4x' }}"
+                sequence: !input 'button2_pushed_4x'
+
+      # Button 3 Conditions
+      - conditions: "{{ component_id == 'button3' }}"
+        sequence:
+          - choose:
+              - conditions: "{{ value == 'pushed' }}"
+                sequence: !input 'button3_pushed'
+              - conditions: "{{ value == 'held' }}"
+                sequence: !input 'button3_held'
+              - conditions: "{{ value == 'pushed_2x' }}"
+                sequence: !input 'button3_pushed_2x'
+              - conditions: "{{ value == 'pushed_3x' }}"
+                sequence: !input 'button3_pushed_3x'
+              - conditions: "{{ value == 'pushed_4x' }}"
+                sequence: !input 'button3_pushed_4x'
+
+      # Button 4 Conditions
+      - conditions: "{{ component_id == 'button4' }}"
+        sequence:
+          - choose:
+              - conditions: "{{ value == 'pushed' }}"
+                sequence: !input 'button4_pushed'
+              - conditions: "{{ value == 'held' }}"
+                sequence: !input 'button4_held'
+              - conditions: "{{ value == 'pushed_2x' }}"
+                sequence: !input 'button4_pushed_2x'
+              - conditions: "{{ value == 'pushed_3x' }}"
+                sequence: !input 'button4_pushed_3x'
+              - conditions: "{{ value == 'pushed_4x' }}"
+                sequence: !input 'button4_pushed_4x'
+
+      # Button 5 Conditions
+      - conditions: "{{ component_id == 'button5' }}"
+        sequence:
+          - choose:
+              - conditions: "{{ value == 'pushed' }}"
+                sequence: !input 'button5_pushed'
+              - conditions: "{{ value == 'held' }}"
+                sequence: !input 'button5_held'
+              - conditions: "{{ value == 'pushed_2x' }}"
+                sequence: !input 'button5_pushed_2x'
+              - conditions: "{{ value == 'pushed_3x' }}"
+                sequence: !input 'button5_pushed_3x'
+              - conditions: "{{ value == 'pushed_4x' }}"
+                sequence: !input 'button5_pushed_4x'
+
