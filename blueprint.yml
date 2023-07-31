@@ -6,115 +6,141 @@ blueprint:
     button_device:
       name: Button Device
       description: The SmartThings button device
+      default: []
       selector:
         text: {}
     # Button 1 Actions
     button1_pushed:
       name: Button 1 Pushed Action
+      default: []
       selector:
         action: {}
     button1_held:
       name: Button 1 Held Action
+      default: []
       selector:
         action: {}
     button1_pushed_2x:
       name: Button 1 Pushed 2x Action
+      default: []
       selector:
         action: {}
     button1_pushed_3x:
       name: Button 1 Pushed 3x Action
+      default: []
       selector:
         action: {}
     button1_pushed_4x:
       name: Button 1 Pushed 4x Action
+      default: []
       selector:
         action: {}
 
     # Button 2 Actions
     button2_pushed:
       name: Button 2 Pushed Action
+      default: []
       selector:
         action: {}
     button2_held:
       name: Button 2 Held Action
+      default: []
       selector:
         action: {}
     button2_pushed_2x:
       name: Button 2 Pushed 2x Action
+      default: []
       selector:
         action: {}
     button2_pushed_3x:
       name: Button 2 Pushed 3x Action
+      default: []
       selector:
         action: {}
     button2_pushed_4x:
       name: Button 2 Pushed 4x Action
+      default: []
       selector:
         action: {}
 
     # Button 3 Actions
     button3_pushed:
       name: Button 3 Pushed Action
+      default: []
       selector:
         action: {}
     button3_held:
       name: Button 3 Held Action
+      default: []
       selector:
         action: {}
     button3_pushed_2x:
       name: Button 3 Pushed 2x Action
+      default: []
       selector:
         action: {}
     button3_pushed_3x:
       name: Button 3 Pushed 3x Action
+      default: []
       selector:
         action: {}
     button3_pushed_4x:
       name: Button 3 Pushed 4x Action
+      default: []
       selector:
         action: {}
 
     # Button 4 Actions
     button4_pushed:
       name: Button 4 Pushed Action
+      default: []
       selector:
         action: {}
     button4_held:
       name: Button 4 Held Action
+      default: []
       selector:
         action: {}
     button4_pushed_2x:
       name: Button 4 Pushed 2x Action
+      default: []
       selector:
         action: {}
     button4_pushed_3x:
       name: Button 4 Pushed 3x Action
+      default: []
       selector:
         action: {}
     button4_pushed_4x:
       name: Button 4 Pushed 4x Action
+      default: []
       selector:
         action: {}
 
     # Button 5 Actions
     button5_pushed:
       name: Button 5 Pushed Action
+      default: []
       selector:
         action: {}
     button5_held:
       name: Button 5 Held Action
+      default: []
       selector:
         action: {}
     button5_pushed_2x:
       name: Button 5 Pushed 2x Action
+      default: []
       selector:
         action: {}
     button5_pushed_3x:
       name: Button 5 Pushed 3x Action
+      default: []
       selector:
         action: {}
     button5_pushed_4x:
       name: Button 5 Pushed 4x Action
+      default: []
       selector:
         action: {}
 
